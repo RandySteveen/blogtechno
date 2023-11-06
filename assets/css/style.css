@@ -190,7 +190,20 @@ body.nav-active { overflow: hidden; }
   border-radius: var(--radius-pill);
 }
 
+.columns-container {
+  display: flex;
+  justify-content: space-between;
+}
 
+.column {
+  flex: 1;
+  padding: 10px;
+  display: inline-block; /* Añade display: inline-block para las columnas */
+}
+
+.column-header {
+  font-weight: bold;
+}
 
 
 

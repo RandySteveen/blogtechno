@@ -19,7 +19,27 @@ function toggleContent(contentId) {
     button.textContent = "Ocultar";
   }
 }
+document.addEventListener('DOMContentLoaded', function () {
+  new Glide('.glide', {
+    type: 'slider', // Cambia el tipo a 'slider'
+    startAt: 0,
+    perView: 3,
+    focusAt: 'center',
+    breakpoints: {
+      800: {
+        perView: 1
+      }
+    },
+    // Desactiva el bucle del carrusel
+    bound: true,
+    // Configura la reproducción automática
+    autoplay: 2000, // El valor es el tiempo en milisegundos entre cada transición (en este caso, 5 segundos)
+    // Configura el rebobinado al llegar al final
+    rewind: true,
 
+    rewindDuration: 800
+  }).mount();
+});
 // Expand Image
 
 

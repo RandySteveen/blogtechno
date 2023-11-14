@@ -159,6 +159,18 @@ input {
   outline: none;
 }
 
+.glide__slide img {
+  width: 100%;
+  height: auto;
+  margin: 8px;
+  transition: transform 0.3s;
+}
+
+/* Efecto de agrandamiento al pasar el cursor */
+.glide__slide:hover img {
+  transform: scale(1.2);
+}
+
 button { cursor: pointer; }
 
 ion-icon { pointer-events: none; }

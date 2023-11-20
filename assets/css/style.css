@@ -166,9 +166,40 @@ input {
   transition: transform 0.3s;
 }
 
-/* Efecto de agrandamiento al pasar el cursor */
-.glide__slide:hover img {
-  transform: scale(1.2);
+/* mapa mental */
+.burbuja {
+  color: #fff;
+  text-align: center;
+  border-radius: 50%;
+  margin: 20px 0 0 40px;
+  transition: transform 0.3s ease-in-out, background-color 1s ease-in-out;
+  display: inline-block;
+}
+
+.burbuja.bb { width: 30px; height: 30px; background-color: #3498db; animation: moveUpDown 1s infinite alternate, changeColor 3s infinite; line-height: 20px; }
+.burbuja.kb { width: 40px; height: 40px; background-color: #3498db; animation: moveD 1s infinite alternate, changeColor 3s infinite; line-height: 30px; }
+.burbuja.mb { width: 50px; height: 50px; background-color: #3498db; animation: moveUpDown 1s infinite alternate, changeColor 3s infinite; line-height: 40px; }
+.burbuja.gb { width: 60px; height: 60px; background-color: #3498db; animation: moveD 1s infinite alternate, changeColor 3s infinite; line-height: 50px; }
+.burbuja.tb { width: 70px; height: 70px; background-color: #3498db; animation: moveUpDown 1s infinite alternate, changeColor 3s infinite; line-height: 60px; }
+.burbuja.pb { width: 80px; height: 80px; background-color: #3498db; animation: moveD 1s infinite alternate, changeColor 3s infinite; line-height: 70px; }
+.burbuja.eb { width: 90px; height: 90px; background-color: #3498db; animation: moveUpDown 1s infinite alternate, changeColor 3s infinite; line-height: 80px; }
+.burbuja.zb { width: 100px; height: 100px; background-color: #3498db; animation: moveD 1s infinite alternate, changeColor 3s infinite; line-height: 90px; }
+.burbuja.yb { width: 110px; height: 110px; background-color: #3498db; animation: moveUpDown 1s infinite alternate, changeColor 3s infinite; line-height: 100px; }
+
+@keyframes moveUpDown {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(25px); }
+}
+
+@keyframes moveD {
+  0% { transform: translateY(30px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes changeColor {
+  0% { background-color: #08b1ff; }
+  50% { background-color: rgba(34, 71, 238, 0.966); }
+  100% { background-color: rgb(236, 68, 68); }
 }
 
 button { cursor: pointer; }
